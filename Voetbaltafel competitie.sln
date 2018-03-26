@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voetbaltafel competitie", "Voetbaltafel competitie\Voetbaltafel competitie.csproj", "{36C0D6BA-4642-4E1B-92EC-59FE98DBC2CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BusinessLayer\BLL.csproj", "{A299C019-9DB9-464E-9AC2-710C14E65EEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36C0D6BA-4642-4E1B-92EC-59FE98DBC2CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C0D6BA-4642-4E1B-92EC-59FE98DBC2CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C0D6BA-4642-4E1B-92EC-59FE98DBC2CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C0D6BA-4642-4E1B-92EC-59FE98DBC2CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A299C019-9DB9-464E-9AC2-710C14E65EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A299C019-9DB9-464E-9AC2-710C14E65EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A299C019-9DB9-464E-9AC2-710C14E65EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A299C019-9DB9-464E-9AC2-710C14E65EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4702310-4B3C-4792-8064-FE5E62897B51}
+	EndGlobalSection
+EndGlobal
