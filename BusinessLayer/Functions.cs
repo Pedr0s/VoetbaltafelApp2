@@ -13,7 +13,7 @@ namespace BusinessLayer
 
         public void Removeplayer(string Name)
         {
-            var context = new VoetbaltabelContext();
+            VoetbaltabelContext context = new VoetbaltabelContext();
             bool Removed = false;
             foreach (Player player in context.Players)
             {
@@ -38,20 +38,28 @@ namespace BusinessLayer
         }
         public void Addplayer(string Name)
         {
-            var context = new VoetbaltabelContext();
-            int Numberofplayers = context.Players.Count();
+            VoetbaltabelContext context = new VoetbaltabelContext();
+            if (context.Players.FirstOrDefault(x => x.Name == Name) == null)
+            {
+            context.Players.Add(new Player {Createdate = DateTime.Now, Name = Name, Ranking = 0 });
+            context.SaveChanges();
+            }
+            else
+            {
+                MessageBox.Show("This name already exists");
+            }
+
             //var test = context.Players.Find("Hallo");
 
             //bool Nametaken;
-            
-            context.Players.Add(new Player {Createdate = DateTime.Now, Name = Name, Ranking = 0 });
-            context.SaveChanges();
+
+
         }
         
 
         public List<Player> PlayersTolist()
         {
-            var context = new VoetbaltabelContext();
+            VoetbaltabelContext context = new VoetbaltabelContext();
             return context.Players.ToList();
         }
 
@@ -67,8 +75,8 @@ namespace BusinessLayer
                 DefenderBlack = DefenderBlack,
                 AttackerWhite = AttackerWhite,
                 DefenderWhite = DefenderWhite
-
             });
+            context.SaveChanges();
         }
 
     }

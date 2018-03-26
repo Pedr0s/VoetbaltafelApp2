@@ -34,7 +34,7 @@ namespace Voetbaltafel_competitie
         {
 
             btnSubmitscore.Text = "Submit";
-            count = 10;
+            count = 4;
             timerUndo.Enabled = !timerUndo.Enabled;
             //visual
             scoreBlack.Enabled = !scoreBlack.Enabled;
@@ -52,9 +52,18 @@ namespace Voetbaltafel_competitie
             if (count == 0)
             {
                 timerUndo.Enabled = false;
+
                 Functions Businesslayer = new Functions();
                 Businesslayer.Addmatch(DateTime.Now,(int)scoreBlack.Value, (int)scoreWhite.Value, cbbAttackerblack.Text, cbbDefenderblack.Text, cbbAttackerwhite.Text, cbbDefenderwhite.Text);
 
+                btnSubmitscore.Text = "Submit";
+                scoreBlack.Enabled = !scoreBlack.Enabled;
+                scoreWhite.Enabled = !scoreWhite.Enabled;
+                cbbAttackerblack.Enabled = !cbbAttackerblack.Enabled;
+                cbbAttackerwhite.Enabled = !cbbAttackerwhite.Enabled;
+                cbbDefenderblack.Enabled = !cbbDefenderblack.Enabled;
+                cbbDefenderwhite.Enabled = !cbbDefenderwhite.Enabled;
+                MessageBox.Show("Match has been added to the database.");
             }
         }
         void Updatecomboboxes()

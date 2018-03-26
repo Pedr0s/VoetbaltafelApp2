@@ -12,6 +12,5 @@ namespace BusinessLayer
         public string Name { get; set; }
         public int Ranking { get; set; }
         public DateTime Createdate { get; set; }
-        //public int Test { get; set; }
     }
 }
