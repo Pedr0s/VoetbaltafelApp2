@@ -44,8 +44,7 @@ namespace BusinessLayer
 
             //bool Nametaken;
             
-            context.Players.Add(new Player {Name = Name, Ranking = 0 });
-            //Createdate = DateTime.Now
+            context.Players.Add(new Player {Createdate = DateTime.Now, Name = Name, Ranking = 0 });
             context.SaveChanges();
         }
         
@@ -56,18 +55,19 @@ namespace BusinessLayer
             return context.Players.ToList();
         }
 
-        public void Addmatch(int GoalsBlack, int GoalsWhite, string AttackerBlack, string DefenderBlack, string AttackerWhite, string DefenderWhite)
+        public void Addmatch(DateTime Date, int GoalsBlack, int GoalsWhite, string AttackerBlack, string DefenderBlack, string AttackerWhite, string DefenderWhite)
         {
             VoetbaltabelContext context = new VoetbaltabelContext();
             context.Matches.Add(new Match
             {
-                Id = context.Matches.Count() + 1,
+                Date = Date,
                 GoalsBlack = GoalsBlack,
                 GoalsWhite = GoalsWhite,
                 AttackerBlack = AttackerBlack,
                 DefenderBlack = DefenderBlack,
                 AttackerWhite = AttackerWhite,
                 DefenderWhite = DefenderWhite
+
             });
         }
 

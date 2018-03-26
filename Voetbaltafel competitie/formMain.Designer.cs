@@ -242,6 +242,7 @@
             this.cbbAddRemove.Size = new System.Drawing.Size(149, 24);
             this.cbbAddRemove.Sorted = true;
             this.cbbAddRemove.TabIndex = 21;
+            this.cbbAddRemove.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbbAddRemove_KeyDown);
             // 
             // pictureBox1
             // 

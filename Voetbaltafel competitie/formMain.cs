@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BusinessLayer;
 
 
+
 namespace Voetbaltafel_competitie
 {
     public partial class Mainform : Form
@@ -52,7 +53,7 @@ namespace Voetbaltafel_competitie
             {
                 timerUndo.Enabled = false;
                 Functions Businesslayer = new Functions();
-                Businesslayer.Addmatch((int)scoreBlack.Value, (int)scoreWhite.Value, cbbAttackerblack.Text, cbbDefenderblack.Text, cbbAttackerwhite.Text, cbbDefenderwhite.Text);
+                Businesslayer.Addmatch(DateTime.Now,(int)scoreBlack.Value, (int)scoreWhite.Value, cbbAttackerblack.Text, cbbDefenderblack.Text, cbbAttackerwhite.Text, cbbDefenderwhite.Text);
 
             }
         }
@@ -77,18 +78,16 @@ namespace Voetbaltafel_competitie
             Businesslayer.Removeplayer(cbbAddRemove.Text);
             Updatecomboboxes();
         }
-    }
-    public class Player
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Ranking { get; set; }
-        //public int Gamesplayed { get; set; }
-        //public int Gameswon { get; set; }
-        //public int Gameslost { get; set; }
 
+        private void cbbAddRemove_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAddplayer_Click(this, new EventArgs());
+            }
+        }
     }
-    
+
 
 }
 /*

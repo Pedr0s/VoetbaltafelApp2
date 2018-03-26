@@ -9,6 +9,7 @@ namespace BusinessLayer
     class Match
     {
         public int Id { get; set; }
+        public DateTime Date { get; set; }
         public int GoalsBlack { get; set; }
         public int GoalsWhite { get; set; }
         public String AttackerBlack { get; set; }
