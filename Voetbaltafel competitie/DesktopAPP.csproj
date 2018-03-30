@@ -52,6 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database_SoccesappDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database_SoccesappDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="formMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,11 +65,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_BusinessLayer_VoetbaltabelContextDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_BusinessLayer_VoetbaltabelContextDataSet2.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +77,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Database_SoccesappDataSet.xsc">
+      <DependentUpon>Database_SoccesappDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database_SoccesappDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database_SoccesappDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database_SoccesappDataSet.xss">
+      <DependentUpon>Database_SoccesappDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,20 +98,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_BusinessLayer_VoetbaltabelContextDataSet2.xsc">
-      <DependentUpon>_BusinessLayer_VoetbaltabelContextDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="_BusinessLayer_VoetbaltabelContextDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_BusinessLayer_VoetbaltabelContextDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_BusinessLayer_VoetbaltabelContextDataSet2.xss">
-      <DependentUpon>_BusinessLayer_VoetbaltabelContextDataSet2.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BLL.csproj">

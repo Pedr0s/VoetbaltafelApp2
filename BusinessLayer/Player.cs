@@ -11,6 +11,10 @@ namespace BusinessLayer
         public int Id { get; set; }
         public string Name { get; set; }
         public int Ranking { get; set; }
+        public int Gamesplayed { get; set; }
+        public int Gameswon { get; set; }
+        public int Gameslost { get; set; }
         public DateTime Createdate { get; set; }
+
     }
 }

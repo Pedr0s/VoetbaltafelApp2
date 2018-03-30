@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="_BusinessLayer_VoetbaltabelContextDataSet2" targetNamespace="http://tempuri.org/_BusinessLayer_VoetbaltabelContextDataSet2.xsd" xmlns:mstns="http://tempuri.org/_BusinessLayer_VoetbaltabelContextDataSet2.xsd" xmlns="http://tempuri.org/_BusinessLayer_VoetbaltabelContextDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="Database_SoccesappDataSet" targetNamespace="http://tempuri.org/Database_SoccesappDataSet.xsd" xmlns:mstns="http://tempuri.org/Database_SoccesappDataSet.xsd" xmlns="http://tempuri.org/Database_SoccesappDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BusinessLayer_VoetbaltabelContextConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BusinessLayer_VoetbaltabelContextConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Voetbaltafel_competitie.Properties.Settings.GlobalReference.Default.BusinessLayer_VoetbaltabelContextConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database_SoccesappConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database_SoccesappConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Voetbaltafel_competitie.Properties.Settings.GlobalReference.Default.Database_SoccesappConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="__MigrationHistoryTableAdapter" GeneratorDataComponentClassName="__MigrationHistoryTableAdapter" Name="__MigrationHistory" UserDataComponentName="__MigrationHistoryTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BusinessLayer_VoetbaltabelContextConnectionString (Settings)" DbObjectName="[BusinessLayer.VoetbaltabelContext].dbo.__MigrationHistory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Database_SoccesappConnectionString (Settings)" DbObjectName="[Database Soccesapp].dbo.__MigrationHistory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[__MigrationHistory] WHERE (([MigrationId] = @Original_MigrationId) AND ([ContextKey] = @Original_ContextKey) AND ([ProductVersion] = @Original_ProductVersion))</CommandText>
@@ -65,12 +65,13 @@ SELECT MigrationId, ContextKey, Model, ProductVersion FROM __MigrationHistory WH
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatchesTableAdapter" GeneratorDataComponentClassName="MatchesTableAdapter" Name="Matches" UserDataComponentName="MatchesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BusinessLayer_VoetbaltabelContextConnectionString (Settings)" DbObjectName="[BusinessLayer.VoetbaltabelContext].dbo.Matches" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Database_SoccesappConnectionString (Settings)" DbObjectName="[Database Soccesapp].dbo.Matches" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[Matches] WHERE (([Id] = @Original_Id) AND ([GoalsBlack] = @Original_GoalsBlack) AND ([GoalsWhite] = @Original_GoalsWhite))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[Matches] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([GoalsBlack] = @Original_GoalsBlack) AND ([GoalsWhite] = @Original_GoalsWhite))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GoalsBlack" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GoalsBlack" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GoalsWhite" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GoalsWhite" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -78,9 +79,10 @@ SELECT MigrationId, ContextKey, Model, ProductVersion FROM __MigrationHistory WH
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Matches] ([GoalsBlack], [GoalsWhite], [AttackerBlack], [DefenderBlack], [AttackerWhite], [DefenderWhite]) VALUES (@GoalsBlack, @GoalsWhite, @AttackerBlack, @DefenderBlack, @AttackerWhite, @DefenderWhite);
-SELECT Id, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, DefenderWhite FROM Matches WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Matches] ([Date], [GoalsBlack], [GoalsWhite], [AttackerBlack], [DefenderBlack], [AttackerWhite], [DefenderWhite]) VALUES (@Date, @GoalsBlack, @GoalsWhite, @AttackerBlack, @DefenderBlack, @AttackerWhite, @DefenderWhite);
+SELECT Id, Date, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, DefenderWhite FROM Matches WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GoalsBlack" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GoalsBlack" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GoalsWhite" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GoalsWhite" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AttackerBlack" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AttackerBlack" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -92,15 +94,16 @@ SELECT Id, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, 
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, DefenderWhite FROM dbo.Matches</CommandText>
+                    <CommandText>SELECT Id, Date, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, DefenderWhite FROM dbo.Matches</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Matches] SET [GoalsBlack] = @GoalsBlack, [GoalsWhite] = @GoalsWhite, [AttackerBlack] = @AttackerBlack, [DefenderBlack] = @DefenderBlack, [AttackerWhite] = @AttackerWhite, [DefenderWhite] = @DefenderWhite WHERE (([Id] = @Original_Id) AND ([GoalsBlack] = @Original_GoalsBlack) AND ([GoalsWhite] = @Original_GoalsWhite));
-SELECT Id, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, DefenderWhite FROM Matches WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[Matches] SET [Date] = @Date, [GoalsBlack] = @GoalsBlack, [GoalsWhite] = @GoalsWhite, [AttackerBlack] = @AttackerBlack, [DefenderBlack] = @DefenderBlack, [AttackerWhite] = @AttackerWhite, [DefenderWhite] = @DefenderWhite WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([GoalsBlack] = @Original_GoalsBlack) AND ([GoalsWhite] = @Original_GoalsWhite));
+SELECT Id, Date, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, DefenderWhite FROM Matches WHERE (Id = @Id)</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GoalsBlack" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GoalsBlack" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GoalsWhite" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GoalsWhite" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AttackerBlack" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AttackerBlack" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -108,9 +111,10 @@ SELECT Id, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AttackerWhite" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AttackerWhite" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DefenderWhite" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DefenderWhite" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GoalsBlack" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GoalsBlack" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GoalsWhite" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GoalsWhite" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[BusinessLayer.VoetbaltabelContext].dbo.Matches" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[Database Soccesapp].dbo.Matches" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -118,6 +122,7 @@ SELECT Id, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, 
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
               <Mapping SourceColumn="GoalsBlack" DataSetColumn="GoalsBlack" />
               <Mapping SourceColumn="GoalsWhite" DataSetColumn="GoalsWhite" />
               <Mapping SourceColumn="AttackerBlack" DataSetColumn="AttackerBlack" />
@@ -129,42 +134,50 @@ SELECT Id, GoalsBlack, GoalsWhite, AttackerBlack, DefenderBlack, AttackerWhite, 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PlayersTableAdapter" GeneratorDataComponentClassName="PlayersTableAdapter" Name="Players" UserDataComponentName="PlayersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BusinessLayer_VoetbaltabelContextConnectionString (Settings)" DbObjectName="[BusinessLayer.VoetbaltabelContext].dbo.Players" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Database_SoccesappConnectionString (Settings)" DbObjectName="[Database Soccesapp].dbo.Players" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[Players] WHERE (([Id] = @Original_Id) AND ([Ranking] = @Original_Ranking))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[Players] WHERE (([Id] = @Original_Id) AND ([Ranking] = @Original_Ranking) AND ([Gamesplayed] = @Original_Gamesplayed) AND ([Createdate] = @Original_Createdate))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Ranking" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ranking" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Gamesplayed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gamesplayed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Createdate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Createdate" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Players] ([Name], [Ranking]) VALUES (@Name, @Ranking);
-SELECT Id, Name, Ranking FROM Players WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Players] ([Name], [Ranking], [Gamesplayed], [Createdate]) VALUES (@Name, @Ranking, @Gamesplayed, @Createdate);
+SELECT Id, Name, Ranking, Gamesplayed, Createdate FROM Players WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Ranking" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ranking" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Gamesplayed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gamesplayed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Createdate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Createdate" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, Name, Ranking FROM dbo.Players</CommandText>
+                    <CommandText>SELECT Id, Name, Ranking, Gamesplayed, Createdate FROM dbo.Players</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Players] SET [Name] = @Name, [Ranking] = @Ranking WHERE (([Id] = @Original_Id) AND ([Ranking] = @Original_Ranking));
-SELECT Id, Name, Ranking FROM Players WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[Players] SET [Name] = @Name, [Ranking] = @Ranking, [Gamesplayed] = @Gamesplayed, [Createdate] = @Createdate WHERE (([Id] = @Original_Id) AND ([Ranking] = @Original_Ranking) AND ([Gamesplayed] = @Original_Gamesplayed) AND ([Createdate] = @Original_Createdate));
+SELECT Id, Name, Ranking, Gamesplayed, Createdate FROM Players WHERE (Id = @Id)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Ranking" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ranking" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Gamesplayed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gamesplayed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Createdate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Createdate" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Ranking" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ranking" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[BusinessLayer.VoetbaltabelContext].dbo.Players" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Gamesplayed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gamesplayed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Createdate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Createdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[Database Soccesapp].dbo.Players" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -174,6 +187,63 @@ SELECT Id, Name, Ranking FROM Players WHERE (Id = @Id)</CommandText>
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="Name" DataSetColumn="Name" />
               <Mapping SourceColumn="Ranking" DataSetColumn="Ranking" />
+              <Mapping SourceColumn="Gamesplayed" DataSetColumn="Gamesplayed" />
+              <Mapping SourceColumn="Createdate" DataSetColumn="Createdate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RankingsTableAdapter" GeneratorDataComponentClassName="RankingsTableAdapter" Name="Rankings" UserDataComponentName="RankingsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database_SoccesappConnectionString (Settings)" DbObjectName="[Database Soccesapp].dbo.Rankings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Rankings] WHERE (([ID] = @Original_ID) AND ([Rank] = @Original_Rank) AND ([Gamesplayed] = @Original_Gamesplayed))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Rank" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Rank" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Gamesplayed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gamesplayed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Rankings] ([Name], [Rank], [Gamesplayed]) VALUES (@Name, @Rank, @Gamesplayed);
+SELECT ID, Name, Rank, Gamesplayed FROM Rankings WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Rank" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Rank" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Gamesplayed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gamesplayed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Name, Rank, Gamesplayed FROM dbo.Rankings</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Rankings] SET [Name] = @Name, [Rank] = @Rank, [Gamesplayed] = @Gamesplayed WHERE (([ID] = @Original_ID) AND ([Rank] = @Original_Rank) AND ([Gamesplayed] = @Original_Gamesplayed));
+SELECT ID, Name, Rank, Gamesplayed FROM Rankings WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Rank" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Rank" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Gamesplayed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gamesplayed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Rank" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Rank" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Gamesplayed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gamesplayed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="[Database Soccesapp].dbo.Rankings" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Rank" DataSetColumn="Rank" />
+              <Mapping SourceColumn="Gamesplayed" DataSetColumn="Gamesplayed" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -182,10 +252,10 @@ SELECT Id, Name, Ranking FROM Players WHERE (Id = @Id)</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_BusinessLayer_VoetbaltabelContextDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_BusinessLayer_VoetbaltabelContextDataSet2" msprop:Generator_UserDSName="_BusinessLayer_VoetbaltabelContextDataSet2">
+  <xs:element name="Database_SoccesappDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database_SoccesappDataSet" msprop:Generator_UserDSName="Database_SoccesappDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="__MigrationHistory" msprop:Generator_TableClassName="__MigrationHistoryDataTable" msprop:Generator_TableVarName="table__MigrationHistory" msprop:Generator_RowChangedName="__MigrationHistoryRowChanged" msprop:Generator_TablePropName="__MigrationHistory" msprop:Generator_RowDeletingName="__MigrationHistoryRowDeleting" msprop:Generator_RowChangingName="__MigrationHistoryRowChanging" msprop:Generator_RowEvHandlerName="__MigrationHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="__MigrationHistoryRowDeleted" msprop:Generator_RowClassName="__MigrationHistoryRow" msprop:Generator_UserTableName="__MigrationHistory" msprop:Generator_RowEvArgName="__MigrationHistoryRowChangeEvent">
+        <xs:element name="__MigrationHistory" msprop:Generator_TableClassName="__MigrationHistoryDataTable" msprop:Generator_TableVarName="table__MigrationHistory" msprop:Generator_TablePropName="__MigrationHistory" msprop:Generator_RowDeletingName="__MigrationHistoryRowDeleting" msprop:Generator_RowChangingName="__MigrationHistoryRowChanging" msprop:Generator_RowEvHandlerName="__MigrationHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="__MigrationHistoryRowDeleted" msprop:Generator_UserTableName="__MigrationHistory" msprop:Generator_RowChangedName="__MigrationHistoryRowChanged" msprop:Generator_RowEvArgName="__MigrationHistoryRowChangeEvent" msprop:Generator_RowClassName="__MigrationHistoryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MigrationId" msprop:Generator_ColumnVarNameInTable="columnMigrationId" msprop:Generator_ColumnPropNameInRow="MigrationId" msprop:Generator_ColumnPropNameInTable="MigrationIdColumn" msprop:Generator_UserColumnName="MigrationId">
@@ -213,10 +283,11 @@ SELECT Id, Name, Ranking FROM Players WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Matches" msprop:Generator_TableClassName="MatchesDataTable" msprop:Generator_TableVarName="tableMatches" msprop:Generator_RowChangedName="MatchesRowChanged" msprop:Generator_TablePropName="Matches" msprop:Generator_RowDeletingName="MatchesRowDeleting" msprop:Generator_RowChangingName="MatchesRowChanging" msprop:Generator_RowEvHandlerName="MatchesRowChangeEventHandler" msprop:Generator_RowDeletedName="MatchesRowDeleted" msprop:Generator_RowClassName="MatchesRow" msprop:Generator_UserTableName="Matches" msprop:Generator_RowEvArgName="MatchesRowChangeEvent">
+        <xs:element name="Matches" msprop:Generator_TableClassName="MatchesDataTable" msprop:Generator_TableVarName="tableMatches" msprop:Generator_TablePropName="Matches" msprop:Generator_RowDeletingName="MatchesRowDeleting" msprop:Generator_RowChangingName="MatchesRowChanging" msprop:Generator_RowEvHandlerName="MatchesRowChangeEventHandler" msprop:Generator_RowDeletedName="MatchesRowDeleted" msprop:Generator_UserTableName="Matches" msprop:Generator_RowChangedName="MatchesRowChanged" msprop:Generator_RowEvArgName="MatchesRowChangeEvent" msprop:Generator_RowClassName="MatchesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
               <xs:element name="GoalsBlack" msprop:Generator_ColumnVarNameInTable="columnGoalsBlack" msprop:Generator_ColumnPropNameInRow="GoalsBlack" msprop:Generator_ColumnPropNameInTable="GoalsBlackColumn" msprop:Generator_UserColumnName="GoalsBlack" type="xs:int" />
               <xs:element name="GoalsWhite" msprop:Generator_ColumnVarNameInTable="columnGoalsWhite" msprop:Generator_ColumnPropNameInRow="GoalsWhite" msprop:Generator_ColumnPropNameInTable="GoalsWhiteColumn" msprop:Generator_UserColumnName="GoalsWhite" type="xs:int" />
               <xs:element name="AttackerBlack" msprop:Generator_ColumnVarNameInTable="columnAttackerBlack" msprop:Generator_ColumnPropNameInRow="AttackerBlack" msprop:Generator_ColumnPropNameInTable="AttackerBlackColumn" msprop:Generator_UserColumnName="AttackerBlack" minOccurs="0">
@@ -250,7 +321,7 @@ SELECT Id, Name, Ranking FROM Players WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Players" msprop:Generator_TableClassName="PlayersDataTable" msprop:Generator_TableVarName="tablePlayers" msprop:Generator_RowChangedName="PlayersRowChanged" msprop:Generator_TablePropName="Players" msprop:Generator_RowDeletingName="PlayersRowDeleting" msprop:Generator_RowChangingName="PlayersRowChanging" msprop:Generator_RowEvHandlerName="PlayersRowChangeEventHandler" msprop:Generator_RowDeletedName="PlayersRowDeleted" msprop:Generator_RowClassName="PlayersRow" msprop:Generator_UserTableName="Players" msprop:Generator_RowEvArgName="PlayersRowChangeEvent">
+        <xs:element name="Players" msprop:Generator_TableClassName="PlayersDataTable" msprop:Generator_TableVarName="tablePlayers" msprop:Generator_TablePropName="Players" msprop:Generator_RowDeletingName="PlayersRowDeleting" msprop:Generator_RowChangingName="PlayersRowChanging" msprop:Generator_RowEvHandlerName="PlayersRowChangeEventHandler" msprop:Generator_RowDeletedName="PlayersRowDeleted" msprop:Generator_UserTableName="Players" msprop:Generator_RowChangedName="PlayersRowChanged" msprop:Generator_RowEvArgName="PlayersRowChangeEvent" msprop:Generator_RowClassName="PlayersRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -262,6 +333,24 @@ SELECT Id, Name, Ranking FROM Players WHERE (Id = @Id)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Ranking" msprop:Generator_ColumnVarNameInTable="columnRanking" msprop:Generator_ColumnPropNameInRow="Ranking" msprop:Generator_ColumnPropNameInTable="RankingColumn" msprop:Generator_UserColumnName="Ranking" type="xs:int" />
+              <xs:element name="Gamesplayed" msprop:Generator_ColumnVarNameInTable="columnGamesplayed" msprop:Generator_ColumnPropNameInRow="Gamesplayed" msprop:Generator_ColumnPropNameInTable="GamesplayedColumn" msprop:Generator_UserColumnName="Gamesplayed" type="xs:int" />
+              <xs:element name="Createdate" msprop:Generator_ColumnVarNameInTable="columnCreatedate" msprop:Generator_ColumnPropNameInRow="Createdate" msprop:Generator_ColumnPropNameInTable="CreatedateColumn" msprop:Generator_UserColumnName="Createdate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rankings" msprop:Generator_TableClassName="RankingsDataTable" msprop:Generator_TableVarName="tableRankings" msprop:Generator_TablePropName="Rankings" msprop:Generator_RowDeletingName="RankingsRowDeleting" msprop:Generator_RowChangingName="RankingsRowChanging" msprop:Generator_RowEvHandlerName="RankingsRowChangeEventHandler" msprop:Generator_RowDeletedName="RankingsRowDeleted" msprop:Generator_UserTableName="Rankings" msprop:Generator_RowChangedName="RankingsRowChanged" msprop:Generator_RowEvArgName="RankingsRowChangeEvent" msprop:Generator_RowClassName="RankingsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnPropNameInTable="RankColumn" msprop:Generator_UserColumnName="Rank" type="xs:int" />
+              <xs:element name="Gamesplayed" msprop:Generator_ColumnVarNameInTable="columnGamesplayed" msprop:Generator_ColumnPropNameInRow="Gamesplayed" msprop:Generator_ColumnPropNameInTable="GamesplayedColumn" msprop:Generator_UserColumnName="Gamesplayed" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -279,6 +368,10 @@ SELECT Id, Name, Ranking FROM Players WHERE (Id = @Id)</CommandText>
     <xs:unique name="Players_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Players" />
       <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Rankings_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Rankings" />
+      <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

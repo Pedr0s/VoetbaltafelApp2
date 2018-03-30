@@ -32,20 +32,50 @@ namespace Voetbaltafel_competitie
         int count;
         private void btnSubmitscore_Click(object sender, EventArgs e)
         {
+            ComboBox[] comboboxs = new ComboBox[] { cbbAttackerblack, cbbAttackerwhite, cbbDefenderblack, cbbDefenderwhite };
+            bool Doublename = false;
+            foreach (ComboBox c in comboboxs)
+            {
+                int count = 0;
+                foreach (ComboBox co in comboboxs)
+                {
 
-            btnSubmitscore.Text = "Submit";
-            count = 4;
-            timerUndo.Enabled = !timerUndo.Enabled;
-            //visual
-            scoreBlack.Enabled = !scoreBlack.Enabled;
-            scoreWhite.Enabled = !scoreWhite.Enabled;
-            cbbAttackerblack.Enabled = !cbbAttackerblack.Enabled;
-            cbbAttackerwhite.Enabled = !cbbAttackerwhite.Enabled;
-            cbbDefenderblack.Enabled = !cbbDefenderblack.Enabled;
-            cbbDefenderwhite.Enabled = !cbbDefenderwhite.Enabled; 
+                    if (c.Text == co.Text)
+                    {
+                        count++;
+                        if (count == 2)
+                        {
+                            Doublename = true;
+                        }
+
+                    }
+
+                }
+            }
+            if (scoreBlack.Value == scoreWhite.Value)
+            {
+                MessageBox.Show("There has to be a winner.");
+            }
+            else if (Doublename)
+            {
+                MessageBox.Show("A player can not play at multiple possitions");
+            }
+            else
+            {
+                btnSubmitscore.Text = "Submit";
+                count = 4;
+                timerUndo.Enabled = !timerUndo.Enabled;
+                //visual
+                scoreBlack.Enabled = !scoreBlack.Enabled;
+                scoreWhite.Enabled = !scoreWhite.Enabled;
+                cbbAttackerblack.Enabled = !cbbAttackerblack.Enabled;
+                cbbAttackerwhite.Enabled = !cbbAttackerwhite.Enabled;
+                cbbDefenderblack.Enabled = !cbbDefenderblack.Enabled;
+                cbbDefenderwhite.Enabled = !cbbDefenderwhite.Enabled;
+            }
 
         }
-            private void timerUndo_Tick(object sender, EventArgs e)
+        private void timerUndo_Tick(object sender, EventArgs e)
         {
             count--;
             btnSubmitscore.Text = $"Undo({count})";
@@ -54,8 +84,13 @@ namespace Voetbaltafel_competitie
                 timerUndo.Enabled = false;
 
                 Functions Businesslayer = new Functions();
-                Businesslayer.Addmatch(DateTime.Now,(int)scoreBlack.Value, (int)scoreWhite.Value, cbbAttackerblack.Text, cbbDefenderblack.Text, cbbAttackerwhite.Text, cbbDefenderwhite.Text);
 
+                Businesslayer.Addmatch(DateTime.Now, (int)scoreBlack.Value, (int)scoreWhite.Value, cbbAttackerblack.Text, cbbDefenderblack.Text, cbbAttackerwhite.Text, cbbDefenderwhite.Text);
+                Businesslayer.Updateplayer((int)scoreBlack.Value, (int)scoreWhite.Value, cbbAttackerblack.Text, cbbDefenderblack.Text, cbbAttackerwhite.Text, cbbDefenderwhite.Text);
+
+
+
+                //visual
                 btnSubmitscore.Text = "Submit";
                 scoreBlack.Enabled = !scoreBlack.Enabled;
                 scoreWhite.Enabled = !scoreWhite.Enabled;
@@ -70,13 +105,14 @@ namespace Voetbaltafel_competitie
         {
             Functions Businesslayer = new Functions();
             var playerlist = Businesslayer.PlayersTolist();
+            playerlist.Sort();
 
-            ComboBox[] comboboxs = new ComboBox[] { cbbAddRemove, cbbAttackerblack, cbbAttackerwhite, cbbDefenderblack, cbbDefenderwhite};
+            ComboBox[] comboboxs = new ComboBox[] { cbbAddRemove, cbbAttackerblack, cbbAttackerwhite, cbbDefenderblack, cbbDefenderwhite };
             foreach (ComboBox c in comboboxs)
             {
                 c.DataSource = playerlist;
                 c.BindingContext = new BindingContext();
-                c.DisplayMember = "Name";
+                //c.DisplayMember = "Name";
                 c.SelectedIndex = -1;
             }
         }
@@ -95,13 +131,18 @@ namespace Voetbaltafel_competitie
                 btnAddplayer_Click(this, new EventArgs());
             }
         }
+
+        private void btnRanking_Click(object sender, EventArgs e)
+        {
+
+            Functions Businesslayer = new Functions();
+            Businesslayer.OrderRanks();
+        }
     }
-
-
 }
 /*
- * You can not submit more then 1 time each minute
- * Undo submit
+ 
+ * 
  *  
  * ?
- */ 
+ */

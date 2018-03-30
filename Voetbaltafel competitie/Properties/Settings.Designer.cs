@@ -33,5 +33,16 @@ namespace Voetbaltafel_competitie.Properties {
                 return ((string)(this["BusinessLayer_VoetbaltabelContextConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=\"Database Soccesapp\";Integrated Security" +
+            "=True")]
+        public string Database_SoccesappConnectionString {
+            get {
+                return ((string)(this["Database_SoccesappConnectionString"]));
+            }
+        }
     }
 }
